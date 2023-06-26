@@ -9,11 +9,6 @@
 // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1][
 
 Ans:
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
 function twoSum(nums, target) {
   // create an empty object to store the sums and indices
   let map = {};
@@ -42,11 +37,6 @@ function twoSum(nums, target) {
 // Explanation: Your function should return k = 2, with the first two elements of nums being 2. It does not matter what you leave beyond the returned k (hence they are underscores)[
 
 Ans:
-/**
- * @param {number[]} nums
- * @param {number} val
- * @return {number}
- */
 let removeElement = function(nums, val) {
   // Initialize the counter variable
   let count = 0;
@@ -72,11 +62,6 @@ let removeElement = function(nums, val) {
 // Output: 2
 
 Ans:
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
 function searchInsert(nums, target) {
   // helper function for recursive binary search
   function binarySearch(start, end) {
@@ -111,10 +96,6 @@ function searchInsert(nums, target) {
 // Incrementing by one gives 123 + 1 = 124. Thus, the result should be [1,2,4].
 
 Ans:
-/**
- * @param {number[]} digits
- * @return {number[]}
- */
 let plusOne = function(digits) {
     return(BigInt(digits.join("")) + BigInt(1)).toString().split("");
 };    
@@ -128,13 +109,6 @@ let plusOne = function(digits) {
 // Explanation: The arrays we are merging are [1,2,3] and [2,5,6]. The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
  Ans:
- /**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
- */
 let merge = function(nums1, m, nums2, n) {
  let n2 = n;
     for (let i = 0; i < n; i++) {
@@ -154,10 +128,6 @@ let merge = function(nums1, m, nums2, n) {
 // Output: true
 
  Ans:
- /**
- * @param {number[]} nums
- * @return {boolean}
- */
  function containsDuplicate(nums) {
   // initialize set to store unique elements
   let set = new Set();
@@ -182,10 +152,6 @@ let merge = function(nums1, m, nums2, n) {
 // Example 1: Input: nums = [0,1,0,3,12] Output: [1,3,12,0,0]
 
  Ans:
-/**
- * @param {number[]} nums
- * @return {void} Do not return anything, modify nums in-place instead.
- */
 function moveZeroes(nums) {
     // initialize count to 0
     let count = 0;
@@ -212,10 +178,6 @@ function moveZeroes(nums) {
 // Example 1: Input: nums = [1,2,2,4] Output: [2,3]
 
 Ans:
- /**
- * @param {number[]} nums
- * @return {number[]}
- */
  function findErrorNums(nums) {
   // initialize set to store unique elements
   let set = new Set();
