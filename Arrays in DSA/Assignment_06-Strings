@@ -200,27 +200,38 @@ let minProductSum = function (nums1, nums2) {
 // Other original arrays could be [4,3,1] or [3,1,4].
 
 Ans:
-function findOriginalArray(changed) {
-    if (changed.length % 2 !== 0) {
-        return [];
-    }
-    let sorted = changed.sort((a, b) => a - b);
-    let freq = new Map();
-    let original = [];
-    for (let num of sorted) {
-        if (freq.has(num * 2)) {
-            original.push(num);
-            freq.set(num * 2, freq.get(num * 2) - 1);
-            if (freq.get(num * 2) === 0) {
-                freq.delete(num * 2);
+let findOriginalArray = function(changed) {
+    let result = [];
+    let map = new Map();
+    
+    changed.sort((a, b) => a - b);
+    
+    for (let i = 0; i < changed.length; i++) {
+        const currentValue = changed[i];
+
+        if (map.has(currentValue)) {
+            const currentValueFrequencyAtMoment = map.get(currentValue);
+            
+            if (currentValueFrequencyAtMoment === 1) {
+                map.delete(currentValue)
+            } else {
+                map.set(currentValue, currentValueFrequencyAtMoment - 1);
             }
         } else {
-            freq.set(num, (freq.get(num) || 0) + 1);
+            let doubledValue = currentValue * 2;
+
+            if (map.has(doubledValue)) {
+                map.set(doubledValue, map.get(doubledValue) + 1);
+            } else {
+                map.set(doubledValue, 1);
+            }
+
+            result.push(currentValue);
         }
     }
-    return original;
-}
-
+    
+    return map.size > 0 ? [] : result;
+};
 //-----------------Question no_07------------- //
 
 // 💡 Question 7:
