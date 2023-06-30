@@ -201,36 +201,36 @@ let minProductSum = function (nums1, nums2) {
 
 Ans:
 let findOriginalArray = function(changed) {
-    let result = [];
-    let map = new Map();
-    
-    changed.sort((a, b) => a - b);
-    
-    for (let i = 0; i < changed.length; i++) {
-        const currentValue = changed[i];
+  let result = [];
+  let map = new Map();
+  
+  changed.sort((a, b) => a - b);
+  
+  for (let i = 0; i < changed.length; i++) {
+      let currentValue = changed[i];
 
-        if (map.has(currentValue)) {
-            const currentValueFrequencyAtMoment = map.get(currentValue);
-            
-            if (currentValueFrequencyAtMoment === 1) {
-                map.delete(currentValue)
-            } else {
-                map.set(currentValue, currentValueFrequencyAtMoment - 1);
-            }
-        } else {
-            let doubledValue = currentValue * 2;
+      if (map.has(currentValue)) {
+          let currentValueFrequencyAtMoment = map.get(currentValue);
+          
+          if (currentValueFrequencyAtMoment === 1) {
+              map.delete(currentValue)
+          } else {
+              map.set(currentValue, currentValueFrequencyAtMoment - 1);
+          }
+      } else {
+          let doubledValue = currentValue * 2;
 
-            if (map.has(doubledValue)) {
-                map.set(doubledValue, map.get(doubledValue) + 1);
-            } else {
-                map.set(doubledValue, 1);
-            }
+          if (map.has(doubledValue)) {
+              map.set(doubledValue, map.get(doubledValue) + 1);
+          } else {
+              map.set(doubledValue, 1);
+          }
 
-            result.push(currentValue);
-        }
-    }
-    
-    return map.size > 0 ? [] : result;
+          result.push(currentValue);
+      }
+  }
+  
+  return map.size > 0 ? [] : result;
 };
 //-----------------Question no_07------------- //
 
