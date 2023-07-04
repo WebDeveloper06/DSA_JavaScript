@@ -1,1 +1,102 @@
+<!-------------------------ASSINMENT - 01----------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS positions</title>
+</head>
+<body>
+    <!-- 1.Explain all the css positions (static,fixed ,sticky,relative,absolute)with one code example each. -->
+
+    <!-- Ans:Here are the explanations of all the CSS positions with one code example each: -->
+    
+    <!-- 1. **Static**: The default position value. An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page.  -->
+
+    <!-- Example: -->
+    
+    <div style="position: static; background-color: aqua;border: 2px solid black; height: 50px; width: 50px;"></div>
+   
+    
+    <!-- 2. **Relative**: An element with position: relative; is positioned relative to its normal position.  -->
+    
+    <!-- Example: -->
+    
+    <div style="position: relative;left: 30px;top: 30px;background-color: blue;border: 2px solid black;height: 50px; width: 50px;"></div>
+   
+    
+    <!-- 3. **Absolute**: An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). -->
+    
+    <!-- Example: -->
+    
+    <div style="position: absolute;right: 0px;top: 0px; background-color: aquamarine;border: 2px solid black;height: 50px; width: 50px;"></div>
+    
+    
+    <!-- 4. **Fixed**: An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. -->
+    
+    <!-- Example: -->
+
+    <div style="position: fixed;bottom: 0px;right: 0px; background-color: skyblue;border: 2px solid black;height: 50px; width: 50px;"></div>
+    
+    
+    <!-- 5. **Sticky**: An element with position: sticky; is positioned based on the user's scroll position. A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). -->
+    
+    <!-- Example: -->
+
+    <div style="position: sticky; top: 0px; background-color: red;border: 2px solid black;height: 50px; width: 50px;"></div>
+    
+</body>
+</html>
+
+<!-------------------------ASSINMENT - 02----------------------->
+
+<!--2. Create a form with basic validation (name,email,phone,password,age,gender,date,color picker)-->
+
+<!--Here is an example of how to create a form with basic validation in HTML:-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+</head>
+<body>
+	<form action="#" method="post">
+      <!-- Name -->
+		<label for="name">Name:</label><br>
+		<input type="text" id="name" name="name" required><br>
+      <!-- Email id  -->
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="email" required><br>
+      <!-- Phone -->
+		<label for="phone">Phone:</label><br>
+		<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+      <!-- Password -->
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password" minlength="8" maxlength="12" required><br>
+      <!-- Age -->
+		<label for="age">Age:</label><br>
+		<input type="number" id="age" name="age" min="18" max="100" required><br>
+      <!-- Gender -->
+		Gender:<br>
+  		<input type="radio" id="male" name="gender" value="male">
+  		<label for="male">Male</label><br>
+  		<input type="radio" id="female" name="gender" value="female">
+  		<label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+  		<label for="female">Other</label><br>
+      <!-- Date -->
+  		Date:<br>
+  		<input type="date" id="date" name="date"><br>
+      <!-- Color -->
+  		Color:<br>
+  		<input type="color" id="colorpicker" name="colorpicker"><br>
+      <!-- Submit -->
+  		<br><input type="submit">
+      <!-- Reset form -->  
+        <input type="reset" value="Clear">
+</form> 
+</body>
+</html>
+
 
