@@ -1,0 +1,75 @@
+body{
+    font-size: 16px;
+}
+section{
+    width: 1500px;
+    max-width: 90%;
+    margin: 0px auto;
+}
+#container{
+    width: 1400px;
+}
+.box{
+    border: 3px solid black; 
+    max-width: 50px;
+    max-height: 50px; 
+    padding: 10px;
+    line-height: 51px; 
+    text-align: center; 
+    font-size: 1.63em;
+    margin: 2px;
+}
+
+.panel{background-color: tomato;
+   
+}
+
+.panel1{background-color: rgb(43, 185, 241);}
+
+.panel2{background-color: yellow;}
+
+.symbol {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    margin-top: -4px;
+    font-size: 9px;
+    line-height: 1;
+    height: 9px;
+    color: rgba(255,255,255,0.9);
+}
+#panelOne{
+    float: left;    
+}
+
+#panelTwo{
+    float: left; 
+    position: relative; 
+    top: 75px; 
+}
+
+.panelThree{
+    float: left; 
+    position: relative; 
+    top: 225px; 
+}
+
+.panelFour{
+    float: left; 
+    position: relative; 
+    top: 75px; 
+}
+
+#panelFive{
+    float: left; 
+}
+
+#lowerContainer{
+    float: right; 
+    margin-top: 20px;
+}
+
+.bottom{
+    float: left; 
+}
