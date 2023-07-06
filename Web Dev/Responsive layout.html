@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive webpage</title>
+
+    <style>
+     h2{color: red;
+        size: 80px;
+    }
+
+        @media only screen and (max-width:400px){
+            body{
+                display: block;
+                background-color: aqua;
+            }
+        }
+
+        @media only screen and (min-width:400px) and (max-width:900px){
+            body{
+                display: block;
+                background-color: rgba(79, 34, 121, 0.518);
+            }
+        }
+
+        @media only screen and (min-width:900px) and (max-width:1380px){
+            body{
+                display: block;
+                background-color: yellowgreen;
+            }
+        }
+
+        @media (min-width:1380px) {
+            body{
+                display: block;
+                background-color: rgba(48, 173, 48, 0.528);
+            }
+        }
+
+    </style>
+</head>
+<body>
+ <h2>This is a Responsive layout.</h2>   
+</body>
+</html>
