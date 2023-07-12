@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <script type="text/javascript">
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var phone = document.forms["myForm"]["phone"].value;
+            var password = document.forms["myForm"]["password"].value;
+            var age = document.forms["myForm"]["age"].value;
+            var gender = document.forms["myForm"]["gender"].value;
+            var date = document.forms["myForm"]["date"].value;
+            var color = document.forms["myForm"]["color"].value;
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            if (phone == "") {
+                alert("Phone number must be filled out");
+                return false;
+            }
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            if (age == "") {
+                alert("Age must be filled out");
+                return false;
+            }
+            if (gender == "") {
+                alert("Gender must be filled out");
+                return false;
+            }
+            if (date == "") {
+                alert("Date must be filled out");
+                return false;
+            }
+            if (color == "") {
+                alert("Color must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <!-- Name -->
+        Name: <input type="text" name="name" pattern="[A-Z a-z]{4,24}" maxlength="15" required><br><br>
+        <!-- Email -->
+        Email: <input type="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required><br><br>
+        <!-- Phone number -->
+        Phone Number: <input type="tel" name="phone" pattern="[+]{1}[0-9]{2} [0-9]{4,5}-[0-9]{4,5}"
+            placeholder="+91 1234-5678" maxlength="15" value="+91"><br><br>
+        <!-- password -->
+        Password: <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title=" Password contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            required><br><br>
+        <!-- Age -->
+        Age: <input type="number" name="age" min="1" max="60" required><br><br>
+        <!-- Gender -->
+        Gender:
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="other">Other<br><br>
+        <!-- Date -->
+        Date: <input type="date" name="date" required><br><br>
+        <!-- Color picker -->
+        Color Picker: <input type="color" name="color" required><br><br>
+        <!-- Submite button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
