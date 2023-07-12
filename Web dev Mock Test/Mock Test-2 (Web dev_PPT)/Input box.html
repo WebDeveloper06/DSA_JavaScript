@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Input Box</title>
+    <style>
+        #myList {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="myInput">
+    <button onclick="addItem()">Add Item</button>
+
+    <ul id="myList"></ul>
+
+    <script>
+        function addItem() {
+            var input = document.getElementById("myInput");
+            var ul = document.getElementById("myList");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(input.value));
+            ul.appendChild(li);
+            input.value = "";
+        }
+    </script>
+
+</body>
+
+</html>
