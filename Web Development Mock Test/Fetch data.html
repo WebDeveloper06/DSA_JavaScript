@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fetch data JSON placeholder API</title>
+    <style>
+        #myList {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .skeleton {
+            background-color: #f2f2f2;
+            animation: skeleton-loading 1s ease-in-out infinite;
+        }
+
+        @keyframes skeleton-loading {
+            0% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="getData()">Get Data</button>
+
+    <ul id="myList"></ul>
+
+    <script>
+        function getData() {
+            var ul = document.getElementById("myList");
+
+            // Add skeleton loader
+            for (var i = 0; i < 10; i++) {
+                var li = document.createElement("li");
+                li.classList.add("skeleton");
+                ul.appendChild(li);
+            }
+
+            fetch('https://jsonplaceholder.typicode.com/todos')
+                .then(response => response.json())
+                .then(data => {
+                    // Remove skeleton loader
+                    ul.innerHTML = "";
+
+                    // Add data to list
+                    data.forEach(item => {
+                        var li = document.createElement("li");
+                        li.appendChild(document.createTextNode(item.title));
+                        ul.appendChild(li);
+                    });
+                })
+                .catch(error => console.error(error));
+        }
+    </script>
+
+</body>
+
+</html>
