@@ -1,0 +1,35 @@
+body {
+    font-family: "Work Sans", sans-serif;
+    margin-top: 100px;
+    background: #190663db;
+    margin-left: 70px;
+
+}
+.pw{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12vw;
+    margin:70px;
+    letter-spacing: 17px;
+    color: rgb(21, 9, 61);
+}
+.time {
+    margin-left: 23%;
+    background: rgb(5, 25, 84);
+    color: #fff;
+    text-align: center;
+    width: 500px;
+    border: 7px solid rgb(255, 252, 252);
+    padding: 8px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16), 0 2px 10px 0 
+    rgba(0,0,0,0.12);
+}
+.hms {
+    font-size: 68pt;
+    font-weight: 200;
+}
+.ampm {
+    font-size: 22pt;
+}
+.date {
+    font-size: 15pt;
+}

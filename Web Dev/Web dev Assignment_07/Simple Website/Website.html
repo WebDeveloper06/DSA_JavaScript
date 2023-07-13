@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Comerce Website</title>
+    <style>
+        body {
+            background-color:rgb(32, 37, 102);
+        }
+
+        #products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            width: calc(25% - 10px);
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #f8f4f4;
+            box-sizing: border-box;
+            border-radius: 20px;
+            background-color:white;
+        }
+
+        .product img {
+            width: 70%;
+            height: 50%;
+            margin-bottom: 10px;
+        }
+
+        .product button{
+            background-color: black;
+            color: azure;
+            padding: 8px 40px;
+            border-radius: 8px;
+            margin: 0px 50px;
+        }
+
+        .product h2{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="products"></div>
+    
+    <script>
+        fetch('https://fakestoreapi.com/products')
+            .then(response => response.json())
+            .then(data => {
+                const productsContainer = document.getElementById('products');
+                data.forEach(product => {
+                    const productElement = document.createElement('div');
+                    productElement.classList.add('product');
+                    productElement.innerHTML = `
+                <img src="${product.image}" alt="${product.title}">
+                <h2>${product.title}</h2>
+                <p>Price: ${product.price}</p>
+                <button>Add to Cart</button>
+              `;
+                    productsContainer.appendChild(productElement);
+                });
+            });
+    </script>
+
+</body>
+
+</html>
