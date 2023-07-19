@@ -2,86 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive image gallery</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive image gallery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-        .gallery {
-            position: absolute;
-            justify-content: center;
-            align-items: center;
-            margin: 10px;
-            padding: 10px;
-            width: 92vw;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
-            column-gap: 5px;
-            row-gap: 5px;
-            border: 5px solid black;
-        }
+    .gallery {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      padding: 10px;
+      width: 92vw;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+      column-gap: 5px;
+      row-gap: 5px;
+      border: 5px solid black;
+    }
 
-        img {
-            width: 98%;
-            height: 98%;
-            object-fit: cover;
-            object-position: center;
-        }
+    img {
+      width: 98%;
+      height: 98%;
+      object-fit: cover;
+      object-position: center;
+    }
 
-        @media only screen and (min-width:0px)and (max-width:299px)
-        {
-          .gallery{
-            display: none;
-          }    
-        }
+    @media only screen and (min-width:0px)and (max-width:299px) {
+      .gallery {
+        display: none;
+      }
+    }
 
-        @media only screen and (min-width:300px)and (max-width:690px)
-        {
-          .gallery{
-            width:90vw;
-            background-color: rgb(250, 250, 250);
-            border-radius: 5px solid aqua;
-          }    
-        }
+    @media only screen and (min-width:300px)and (max-width:690px) {
+      .gallery {
+        width: 90vw;
+        background-color: rgb(250, 250, 250);
+        border-radius: 5px solid aqua;
+      }
+    }
 
-        @media only screen and (min-width: 691px)and(max-width:1022px)
-        {
-          .gallery{
-            width: 75vw;
-          }    
-        }
+    @media only screen and (min-width: 691px)and(max-width:1022px) {
+      .gallery {
+        width: 75vw;
+      }
+    }
 
-        @media only screen and (min-width:1022px)
-        {
-          .gallery{
-            width: 92vw;
-          }    
-        }
-
-    </style>
+    @media only screen and (min-width:1022px) {
+      .gallery {
+        width: 92vw;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="gallery">
-
-        <div><img src="png 01.png" alt=""></div>
-        <div><img src="png02.png" alt=""></div>
-        <div><img src="png03.png" alt=""></div>
-
-
-        <div><img src="png04.png" alt=""></div>
-        <div><img src="png04.png" alt=""></div>
-        <div><img src="png05.png" alt=""></div>
-
-    </div>
+  <div class="gallery">
+    <!-- PHOTO ROW NO. 1 -->
+    <div><img src="PHOTO\png 01.png" alt="PHOTO 1"></div>
+    <div><img src="PHOTO\png02.png" alt="PHOTO 2"></div>
+    <div><img src="PHOTO\png03.png" alt="PHOTO 3"></div>
+    <!-- PHOTO ROW NO. 2 -->
+    <div><img src="PHOTO\png04.png" alt="PHOTO 4"></div>
+    <div><img src="PHOTO\png04.png" alt="PHOTO 5"></div>
+    <div><img src="PHOTO\png05.png" alt="PHOTO 6"></div>
+  </div>
 </body>
 
 </html>
