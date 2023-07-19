@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dasboard</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            background-color: rgb(27, 26, 26);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h3 {
+            color: rgb(162, 162, 162);
+            font-weight: 600;
+            margin-top: 12px;
+            margin-bottom: 27px;
+            margin-left: 12px;
+        }
+
+        .table {
+            text-align: left;
+            margin: 25px 50px;
+            color: white; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid white;
+        }
+
+        th,
+        td {
+            padding: 2px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Set the table's width to 100% on small screens */
+
+        @media only screen and (max-width: 600px) {
+            table {
+                width: 100%;
+                overflow-x:auto;
+                display:block;
+            }
+        }
+
+        /* Remove the scrollbar and set a fixed width on large screens */
+
+        @media only screen and (min-width: 601px) {
+            table {
+                width: 800px;
+                overflow-x: hidden;
+                display: table;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h3>Student DashBoard</h3>
+
+    <div class="table">
+        <table>
+            <thead>
+                <!-- Heading -->
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- 1st row -->
+                <tr>
+                    <td>Rahul Sharma</td>
+                    <td>rahul.sharma@example.com</td>
+                    <td>9876543210</td>
+                </tr>
+                <!-- 2nd row -->
+                <tr>
+                    <td>Priya Patel</td>
+                    <td>priya.patel@example.com</td>
+                    <td>8765432109</td>
+                </tr>
+                <!-- 3rd row -->
+                <tr>
+                    <td>Amit Singh</td>
+                    <td>amit.singh@example.com</td>
+                    <td>7654321098</td>
+                </tr>
+                <!-- 4th row -->
+                <tr>
+                    <td>Sneha Verma</td>
+                    <td>sneha.verma@example.com</td>
+                    <td>6543210987</td>
+                </tr>
+                <!-- 5th row -->
+                <tr>
+                    <td>Mohit Agarwal</td>
+                    <td>mohit.agarwal@example.com</td>
+                    <td>5432109876</td>
+                </tr>
+                <tr>
+                    <td>Neha Gupta</td>
+                    <td>neha.gupta@example.com</td>
+                    <td>4321098765</td>
+                </tr>
+                <!-- 7th row -->
+                <tr>
+                    <td>Rajesh Kumar</td>
+                    <td>rajesh.kumar@example.com</td>
+                    <td>3210987654</td>
+                </tr>
+                <!-- 8th row -->
+                <tr>
+                    <td>Anita Desai</td>
+                    <td>anita.desai@example.com</td>
+                    <td>2109876543</td>
+                </tr>
+                <!-- 9th row -->
+                <tr>
+                    <td>Varun Mathotra</td>
+                    <td>varun.mathotra@example.com</td>
+                    <td>1098765432</td>
+                </tr>
+                <!-- 10th row -->
+                <tr>
+                    <td>Pooja Mehta</td>
+                    <td>pooja.mehta@example.com</td>
+                    <td>0987654321</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
