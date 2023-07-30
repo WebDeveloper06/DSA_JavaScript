@@ -206,4 +206,3 @@ function getMinimumDifference(root) {
     return minDiff;
 }
 
-
