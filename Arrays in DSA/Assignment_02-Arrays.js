@@ -225,14 +225,3 @@ function minScore(nums, k) {
     }
     return minScore;
 }
-
-
-
-
-
-
-
-
-
-
-
