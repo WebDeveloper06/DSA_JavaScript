@@ -321,5 +321,3 @@ function findOriginalArray(changed) {
     }
     return res;
 }
-
-
