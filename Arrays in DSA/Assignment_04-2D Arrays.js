@@ -240,4 +240,3 @@ function rearrangeArray(nums) {
     }
     return nums;
 }
-
