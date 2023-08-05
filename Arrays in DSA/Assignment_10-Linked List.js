@@ -420,5 +420,3 @@ const hat = {
   },
 };
 console.log(oddEvenList(hat)); 
-
-  
